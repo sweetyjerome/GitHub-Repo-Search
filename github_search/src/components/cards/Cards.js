@@ -10,7 +10,7 @@ function Cards (props) {
     const repo= props.data;
 
     useEffect(() => {
-        Axios.get(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/license`,{ headers: {Authorization : 'Token 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'}})
+        Axios.get(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/license`, { headers: {'Authorization' : 'token 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s'} })
         .then(res => {
             setLicense(res.data.license.name)
         })

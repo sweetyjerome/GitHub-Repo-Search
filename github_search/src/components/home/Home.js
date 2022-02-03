@@ -7,7 +7,7 @@ function HomePage () {
     const [userData, setUserData] = useState({});
 
     useEffect(() => {
-        axios.get('https://api.github.com/users/farhankn', { headers: {'Authorization' : 'Token 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'} }
+        axios.get('https://api.github.com/users/farhankn', { headers: {'Authorization' : 'token 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'} }
         )
         .then(res => {
             setUserData(res.data);
