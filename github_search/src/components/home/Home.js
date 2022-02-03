@@ -7,7 +7,8 @@ function HomePage () {
     const [userData, setUserData] = useState({});
 
     useEffect(() => {
-        axios.get(`https://api.github.com/users/farhankn`)
+        axios.get('https://api.github.com/users/farhankn', { headers: {'Authorization' : 'Token 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'} }
+        )
         .then(res => {
             setUserData(res.data);
             console.log(res.data);
@@ -24,7 +25,7 @@ function HomePage () {
                 <img src = {userData.avatar_url} style={Style.picture}/>
             </div>
             <div style={Style.aboutBox}>
-                <h1>{userData.name}</h1>
+                <h2>{userData.name}</h2>
                 <h3 style={Style.login}>{userData.login}</h3>
             </div>
         </div>   

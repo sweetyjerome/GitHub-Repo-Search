@@ -9,7 +9,6 @@ import OverviewPage from '../overview/Overview';
 import RepositoriesPage from '../repository/Repositories';
 import {overview, repo, projects } from '../../assets/index';
 import style from './style';
-import mockData from '../Data.json';
 
 
 export default function LabTabs(props) {
@@ -37,7 +36,7 @@ export default function LabTabs(props) {
             <OverviewPage/>
         </TabPanel>
         <TabPanel value="2">
-            <RepositoriesPage repoUrl={repoUrl}/>  {/*  data={mockData}  */}
+            <RepositoriesPage repoUrl={repoUrl}/> 
             </TabPanel>
         <TabPanel value="3">
             project
