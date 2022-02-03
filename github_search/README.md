@@ -10,7 +10,7 @@ go inside the project directory:
 
 install the dependencies:
 
-### npm install
+### `npm install`
 
 then run:
 
