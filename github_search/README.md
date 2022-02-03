@@ -4,12 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-go inside the project directory
-### cd github_search
+go inside the project directory:
 
-install the dependencies
+### `cd github_search`
 
-###npm install
+install the dependencies:
+
+### npm install
 
 then run:
 
