@@ -36,6 +36,7 @@ function HomePage () {
                 <div>
                     {userData.bio}
                 </div>
+                 {/* rendering the additional details of the user such as followers and following count. */}
                 <div style={Style.info}>
                     <FollowersIcon style={Style.followersIcon}/>
                     {userData.followers}

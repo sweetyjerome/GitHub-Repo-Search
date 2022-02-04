@@ -8,6 +8,7 @@ function Cards (props) {
     const [license, setLicense] = useState('');
     const repo= props.data;
 
+    //fetching the license details about each repository and storing inside the state variable license.
     useEffect(() => {
         Axios.get(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/license`,{ headers: {'Authorization' : `token ${process.env.REACT_APP_PTA}`}})
         .then(res => {
@@ -19,9 +20,9 @@ function Cards (props) {
     return(
         <div style={style.mainDiv}> 
         <hr></hr>
-        <Link href={repo.html_url} underline='hover' variant="h6" > {repo.name} </Link>
-        <p>{repo.description}</p>
-
+        <Link href={repo.html_url} underline='hover' variant="h6" > {repo.name} </Link>  {/* displaying the name of repo */}
+        <p>{repo.description}</p>  {/* displaying the description */}
+         {/* rendering the additional details, for now i have added only the license details. */}
         {license && 
         <div style={style.licenseDiv}> 
             <BalanceIcon style={style.icon}/>
