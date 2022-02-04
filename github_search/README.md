@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Setting up the code and available scripts
 
 go inside the project directory:
 
@@ -45,4 +45,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### Short Description 
 
+Created a basic app that searches the repoitories of a specific user using GitHub API.
+Used [Material UI components and icons](https://mui.com/components/) for icons and certain components.
+API calls are made using Axios.
+
+### Future Improvements
+
+*Refactor the code so as to make components reusable.
+
+*Write test cases
+
+*Add more details in the UI and improve search funtionality by addidng clear search
+
+*Use bootstrap to make it more responsive.
+
+*Deploy the app.
+
+### Feedback
+
+I started the code from scratch and was not able to complete it as i had planned, but due to the time constraint submitting this. Tried deploying the code in [netlify](https://app.netlify.com/sites/laughing-austin-138275/deploys/61fd53b6cc027a0009f98425), got [404 error](https://61fd53b6cc027a0009f98425--laughing-austin-138275.netlify.app/). Tried deploying in [Hrokuapp](https://dashboard.heroku.com/apps/git-profile-search/deploy/github), facing API fetch issues. Currently looking into it. :(
