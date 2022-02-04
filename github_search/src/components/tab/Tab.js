@@ -7,11 +7,13 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import OverviewPage from '../overview/Overview';
 import RepositoriesPage from '../repository/Repositories';
-import {overview, repo, projects } from '../../assets/index';
 import style from './style';
+import Overview from '@mui/icons-material/MenuBook';
+import Repositories from '@mui/icons-material/BookOutlined';
+import Projects from '@mui/icons-material/AssessmentOutlined';
 
 
-export default function LabTabs(props) {
+export default function Tabs(props) {
   const [value, setValue] = React.useState('1');
   const repoUrl = props.data;
 
@@ -24,11 +26,11 @@ export default function LabTabs(props) {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label=" Tab bar" centered>
-            <img src={overview} style={style.icons}></img>
+            <Overview style={style.icons}/>
             <Tab label="Overview" value="1" />
-            <img src={repo} style={style.icons}></img>
+            <Repositories style={style.icons}/>
             <Tab label="Repositories" value="2" />
-            <img src={projects} style={style.icons}></img>
+            <Projects style={style.icons}/>
             <Tab label="Projects" value="3" />
           </TabList>
         </Box>
@@ -39,7 +41,7 @@ export default function LabTabs(props) {
             <RepositoriesPage repoUrl={repoUrl}/> 
             </TabPanel>
         <TabPanel value="3">
-            project
+            currently no projects
             </TabPanel>
       </TabContext>
     </Box>

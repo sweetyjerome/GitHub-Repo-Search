@@ -1,4 +1,3 @@
-import { usePreviousProps } from '@mui/utils';
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import style from './style';
@@ -10,7 +9,7 @@ function Cards (props) {
     const repo= props.data;
 
     useEffect(() => {
-        Axios.get(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/license`, { headers: {'Authorization' : 'token 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s'} })
+        Axios.get(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/license`,{ headers: {'Authorization' : 'token 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'}})
         .then(res => {
             setLicense(res.data.license.name)
         })
@@ -18,7 +17,7 @@ function Cards (props) {
     }, [])
 
     return(
-        <div style={style.mainDiv}>
+        <div style={style.mainDiv}> 
         <hr></hr>
         <Link href={repo.html_url} underline='hover' variant="h6" > {repo.name} </Link>
         <p>{repo.description}</p>

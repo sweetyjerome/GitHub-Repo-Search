@@ -1,11 +1,4 @@
 const style = {
-
-     conatainer: {
-        backgroundColor: 'blue',
-    },
-    navBar:{
-        //backgroundColor:'yellow',
-    },
     main:{
         width:'75%',
         float:'right',
@@ -29,6 +22,24 @@ const style = {
 aboutBox:{
     marginLeft:'5%',
     textAlign:'left',
+},
+info:{
+    marginTop:'7%',
+    display: 'flex',
+    fontSize:'13px'
+},
+followersIcon:{
+    fontSize:'150%',
+    marginTop:'-0.5%',
+},
+circleIcon:{
+    fontSize:'40%',
+    marginTop:'7px',
+    marginLeft:'7px',
+    marginRight:'7px',
+},
+link:{
+marginLeft:'3%',
 }
 }
 

@@ -10,15 +10,14 @@ const style = {
        fontSize:'12px' 
     },
     licenseDiv :{
-        //backgroundColor:'yellow',
         display:'flex',
-        width: '25%',
+        width: '20%',
         
     },
     icon: {
-        fontSize:'15px',
-        paddingTop:'9%',
-        paddingRight:'7px'
+        fontSize:'100%',
+        paddingTop:'5%',
+        paddingRight:'2%'
     },
 };
 export default style;

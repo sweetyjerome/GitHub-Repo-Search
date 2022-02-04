@@ -9,9 +9,9 @@ function RepositoriesPage(props) {
     const [publicRepos, setPublicRepos] = useState([]);
 
     useEffect(() => {
-        axios.get(fetchReposUrl)
+        axios.get(fetchReposUrl, { headers: {'Authorization' : `token ${process.env.REACT_APP_PTA}`}})
         .then(res => {
-            setPublicRepos(res.data);        
+            setPublicRepos(res.data);       
         }).catch( error => console.log(error.message));
    },[])
 
@@ -20,7 +20,8 @@ function RepositoriesPage(props) {
         const filteredWords = publicRepos.filter((item) => {
             return item.name.toLowerCase().includes(searchedWord.toLowerCase())
         });
-        searchedWord === '' ? setFilteredData([]) : setFilteredData(filteredWords)
+        setFilteredData(filteredWords)
+        // searchedWord === '' ? setFilteredData([]) :
     }
 
 
@@ -29,7 +30,7 @@ function RepositoriesPage(props) {
             <div style={style.searchBar}>
                 <input style={style.textInput} type='text' placeholder='Find a Repository...' onChange={handleChange} />
             </div>
-            {filteredData.length !== 0 && (
+  
                 <div style={style.displayList}>
                     {filteredData.map((value, key) => {
                         return (
@@ -37,7 +38,6 @@ function RepositoriesPage(props) {
                         )
                     })}
                 </div>
-            )}
         </div>
     )
 }

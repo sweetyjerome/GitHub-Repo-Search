@@ -2,7 +2,7 @@ import React from "react";
 
 function OverviewPage(){
     return(
-        <p> welcome</p>
+        <p> Head over to Repositories to search a Repo </p>
     )
 }
 
