@@ -5,13 +5,11 @@ import axios from 'axios';
 import FollowersIcon from '@mui/icons-material/GroupOutlined';
 import CircleIcon from '@mui/icons-material/Circle';
 import Link from '@mui/material/Link';
-import CompanyIcon from '@mui/icons-material/Business';
-import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
-import MailIcon from '@mui/icons-material/LocalPostOfficeOutlined';
-import LinkIcon from '@mui/icons-material/InsertLinkOutlined';
 
 function HomePage () {
     const [userData, setUserData] = useState({});
+
+    //fetching the user deatils using github API and setting the state variable to the response data.
 
     useEffect(() => {
         axios.get('https://api.github.com/users/farhankn', { headers: {'Authorization' : `token ${process.env.REACT_APP_PTA}` }}
@@ -24,19 +22,21 @@ function HomePage () {
     return(
     <div>
         <div style={Style.main}>
-            <CenteredTabs data={userData.repos_url}/> 
+            <CenteredTabs data={userData.repos_url}/> {/** pass the repo url to the next page as props**/}
             
         </div>
-        <div style={Style.menu}>
+        <div style={Style.menu}> 
             <div style={Style.pictureBox}>
                 <img src = {userData.avatar_url} style={Style.picture}/>
             </div>
-            <div style={Style.aboutBox}>
+            {/** display the details of the user **/}
+            <div style={Style.aboutBox}> 
                 <h2>{userData.name}</h2>
                 <h3 style={Style.login}>{userData.login}</h3>
                 <div>
                     {userData.bio}
                 </div>
+                 {/* rendering the additional details of the user such as followers and following count. */}
                 <div style={Style.info}>
                     <FollowersIcon style={Style.followersIcon}/>
                     {userData.followers}

@@ -5,8 +5,8 @@ import Cards from '../cards/Cards'
 
 function RepositoriesPage(props) {
     const fetchReposUrl = props.repoUrl;
-    const [filteredData, setFilteredData] = useState([]);
-    const [publicRepos, setPublicRepos] = useState([]);
+    const [filteredData, setFilteredData] = useState([]); //state variable to control the rendering of searched repos
+    const [publicRepos, setPublicRepos] = useState([]); //state variable to hold all the repos fetched from github API
 
     useEffect(() => {
         axios.get(fetchReposUrl, { headers: {'Authorization' : `token ${process.env.REACT_APP_PTA}`}})
