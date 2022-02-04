@@ -54,9 +54,13 @@ API calls are made using Axios.
 ### Future Improvements
 
 *Refactor the code so as to make components reusable.
-*write test cases
+
+*Write test cases
+
 *Add more details in the UI and improve search funtionality by addidng clear search
+
 *Use bootstrap to make it more responsive.
+
 *Deploy the app.
 
 ### Feedback
